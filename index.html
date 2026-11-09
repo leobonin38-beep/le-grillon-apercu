@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Le Grillon · Pizzeria au feu de bois · Saint-Étienne-de-Saint-Geoirs</title>
+  <meta name="description" content="Le Grillon, restaurant pizzeria à Saint-Étienne-de-Saint-Geoirs (38) : pizzas au feu de bois, ravioles du Royans, burgers et cuisine italienne maison. Terrasse, soirées karaoké, vente à emporter. 04 76 31 38 51.">
+  <meta name="theme-color" content="#140c0b">
+  <meta name="robots" content="noindex, nofollow"><!-- aperçu client : ne pas indexer -->
+  <meta name="geo.region" content="FR-38">
+  <meta name="geo.placename" content="Saint-Étienne-de-Saint-Geoirs">
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Le Grillon">
+  <meta property="og:title" content="Le Grillon · Pizzeria au feu de bois à Saint-Étienne-de-Saint-Geoirs">
+  <meta property="og:description" content="Pizzas au feu de bois, ravioles et cuisine italienne maison. Sur place, en terrasse ou à emporter.">
+  <meta property="og:image" content="images/hero-four.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/logo/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/logo/logo-original-fond-blanc.png">
+  <link rel="preload" href="fonts/Fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="images/hero-four-1600.webp" imagesrcset="images/hero-four-960.webp 960w, images/hero-four-1600.webp 1600w, images/hero-four-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    /* L'intro du logo ne se joue qu'une fois par visite */
+    try { if (sessionStorage.getItem("grillon-intro") || matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("no-intro"); } catch (e) { document.documentElement.classList.add("no-intro"); }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Le Grillon",
+    "description": "Restaurant pizzeria : pizzas au feu de bois, ravioles, burgers et cuisine italienne maison.",
+    "image": "images/hero-four.jpg",
+    "logo": "images/logo/logo.svg",
+    "servesCuisine": ["Italienne", "Pizza", "Française"],
+    "priceRange": "€",
+    "telephone": "+33476313851",
+    "email": "legrillon38@orange.fr",
+    "hasMenu": "#carte",
+    "acceptsReservations": "True",
+    "sameAs": ["https://www.facebook.com/pages/category/Pizza-Place/Le-Grillon-Sesg-1697129743664440/"],
+    "address": {"@type": "PostalAddress", "streetAddress": "Route de l'Aéroport", "postalCode": "38590", "addressLocality": "Saint-Étienne-de-Saint-Geoirs", "addressRegion": "Isère", "addressCountry": "FR"},
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Sunday"], "opens": "12:00", "closes": "14:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Sunday"], "opens": "19:00", "closes": "21:30"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "12:00", "closes": "14:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "19:00", "closes": "22:30"}
+    ],
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Terrasse", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Parking gratuit", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Accès PMR", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuit", "value": true}
+    ],
+    "paymentAccepted": "Espèces, Visa, MasterCard, Maestro, Apple Pay, Ticket Restaurant, Chèques vacances, Virement"
+  }
+  </script>
+</head>
+<body>
+  <!-- ================= SPRITE : logo + icônes ================= -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="logo-mark" viewBox="20 20 520 520">
+        <path d="M484.9 286.2A205 205 0 1 1 465.8 192.4" fill="none" stroke="var(--logo-red, #e8222b)" stroke-width="80"/>
+        <rect x="185" y="266" width="335" height="64" fill="var(--logo-red, #e8222b)"/>
+        <g fill="var(--logo-ink, #fff)"><rect x="183" y="274" width="60" height="5" rx="2.5"/><rect x="183" y="287" width="60" height="5" rx="2.5"/><rect x="183" y="300" width="60" height="5" rx="2.5"/><rect x="183" y="313" width="60" height="5" rx="2.5"/></g>
+      </symbol>
+      <symbol id="logo" viewBox="0 0 560 560">
+        <use href="#logo-mark" x="20" y="20" width="520" height="520"/>
+        <text x="252" y="318" fill="var(--logo-ink, #fff)" font-family="Manrope, sans-serif" font-weight="500" font-size="54" textLength="256" lengthAdjust="spacingAndGlyphs">GRILLON</text>
+        <text x="34" y="432" fill="var(--logo-le, #fff)" font-family="Pinyon Script, cursive" font-size="200">Le</text>
+      </symbol>
+      <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+      <symbol id="i-pasta" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></symbol>
+      <symbol id="i-wine" viewBox="0 0 24 24"><path d="M8 22h8M7 10h10M12 15v7M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5z"/></symbol>
+      <symbol id="i-ice" viewBox="0 0 24 24"><path d="m7 11 4.08 10.35a1 1 0 0 0 1.84 0L17 11M17 7A5 5 0 0 0 7 7M17 7a2 2 0 0 1 0 4H7a2 2 0 0 1 0-4"/></symbol>
+      <symbol id="i-access" viewBox="0 0 24 24"><circle cx="16" cy="4" r="1"/><path d="m18 19 1-7-6 1M5 8l3-3 5.5 3-2.36 3.5M4.24 14.5a5 5 0 0 0 6.88 6M13.76 17.5a5 5 0 0 0-6.88-6"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+      <symbol id="i-parking" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></symbol>
+      <symbol id="i-party" viewBox="0 0 24 24"><path d="M5.8 11.3 2 22l10.7-3.79M4 3h.01M22 8h.01M15 2h.01M22 20h.01M22 2l-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10M22 13l-.82-.33c-.86-.34-1.82.2-1.98 1.11-.11.7-.72 1.22-1.43 1.22H17M11 2l.33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2z"/></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></symbol>
+      <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></symbol>
+      <symbol id="i-paw" viewBox="0 0 24 24"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.05Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10z"/></symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-pizza" viewBox="0 0 24 24"><path d="M15 11h.01M11 15h.01M16 16h.01M2 16l20 6-6-20A20 20 0 0 0 2 16M5.71 17.11a17 17 0 0 1 11.4-11.4"/></symbol>
+      <symbol id="i-nav" viewBox="0 0 24 24"><path d="M3 11 22 2l-9 19-2-8z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- Intro : le logo se dessine, puis le rideau se lève -->
+  <div class="intro" aria-hidden="true">
+    <svg class="intro__logo" viewBox="0 0 560 560">
+      <path class="intro__ring" pathLength="1" d="M484.9 286.2A205 205 0 1 1 465.8 192.4" fill="none" stroke="#e8222b" stroke-width="80"/>
+      <g class="intro__bar">
+        <rect x="185" y="266" width="335" height="64" fill="#e8222b"/>
+        <g fill="#fff"><rect x="183" y="274" width="60" height="5" rx="2.5"/><rect x="183" y="287" width="60" height="5" rx="2.5"/><rect x="183" y="300" width="60" height="5" rx="2.5"/><rect x="183" y="313" width="60" height="5" rx="2.5"/></g>
+        <text x="252" y="318" fill="#fff" font-family="Manrope, sans-serif" font-weight="500" font-size="54" textLength="256" lengthAdjust="spacingAndGlyphs">GRILLON</text>
+      </g>
+      <text class="intro__le" x="34" y="432" fill="#fff" font-family="Pinyon Script, cursive" font-size="200">Le</text>
+    </svg>
+  </div>
+
+  <a class="skip" href="#carte">Aller à la carte</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <!-- ================= EN-TÊTE ================= -->
+  <header class="header" id="top">
+    <a href="#top" class="logo" aria-label="Le Grillon, retour en haut">
+      <svg class="logo__mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+      <span class="logo__text"><em>Le</em>GRILLON</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="#histoire">La maison</a>
+      <a href="#carte">La carte</a>
+      <a href="#ambiance">Ambiance</a>
+      <a href="#infos">Horaires</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header__right">
+      <span class="status" data-status><i></i><span>…</span></span>
+      <a class="btn btn--small btn--red" href="tel:+33476313851">
+        <svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>
+        <span>Réserver</span>
+      </a>
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HÉRO ================= -->
+    <section class="hero" aria-label="Accueil">
+      <div class="hero__bg"><img src="images/hero-four-1600.webp" srcset="images/hero-four-960.webp 960w, images/hero-four-1600.webp 1600w, images/hero-four-2400.webp 2400w" sizes="100vw" alt="Pizza qui cuit dans le four à bois" fetchpriority="high" decoding="async"></div>
+      <canvas class="embers" aria-hidden="true"></canvas>
+      <div class="hero__veil"></div>
+      <div class="hero__content">
+        <p class="hero__kicker"><span class="script">Restaurant · Pizzeria</span> Saint-Étienne-de-Saint-Geoirs</p>
+        <h1 class="hero__title" data-split>
+          La flamme du <em>feu de bois</em>, le goût de l'<em>Italie</em>.
+        </h1>
+        <p class="hero__lead">Pizzas cuites au four à bois, ravioles du Royans, burgers et cuisine maison, servis en salle, en terrasse ou à emporter.</p>
+        <div class="hero__cta">
+          <a class="btn btn--red btn--magnet" href="#carte">Découvrir la carte <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost btn--magnet" href="tel:+33476313851"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>04 76 31 38 51</a>
+        </div>
+      </div>
+      <ul class="hero__facts" aria-label="En bref">
+        <li><strong data-count="26">26</strong><span>pizzas à la carte</span></li>
+        <li><strong data-count="6">6</strong><span>jours sur 7</span></li>
+        <li><strong>100%</strong><span>fait maison</span></li>
+      </ul>
+      <a href="#histoire" class="hero__scroll" aria-label="Défiler vers le bas"><span></span></a>
+    </section>
+
+    <!-- ================= BANDEAU ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Pizzas au feu de bois</span><b>✦</b><span>Ravioles du Royans</span><b>✦</b><span>Fait maison</span><b>✦</b><span>Terrasse ensoleillée</span><b>✦</b><span>Soirées karaoké</span><b>✦</b><span>À emporter</span><b>✦</b>
+        <span>Pizzas au feu de bois</span><b>✦</b><span>Ravioles du Royans</span><b>✦</b><span>Fait maison</span><b>✦</b><span>Terrasse ensoleillée</span><b>✦</b><span>Soirées karaoké</span><b>✦</b><span>À emporter</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ================= HISTOIRE ================= -->
+    <section class="story section" id="histoire">
+      <div class="story__media">
+        <figure class="story__img story__img--a" data-parallax="-0.08"><img src="images/pizza-margherita-800.webp" srcset="images/pizza-margherita-480.webp 480w, images/pizza-margherita-800.webp 800w, images/pizza-margherita-1200.webp 1200w" sizes="(max-width: 1080px) 80vw, 36vw" alt="Pizza margherita sortie du four" loading="lazy" decoding="async"></figure>
+        <figure class="story__img story__img--b" data-parallax="0.1"><img src="images/pates-800.webp" srcset="images/pates-480.webp 480w, images/pates-800.webp 800w, images/pates-1200.webp 1200w" sizes="(max-width: 1080px) 55vw, 26vw" alt="Assiette de pâtes maison" loading="lazy" decoding="async"></figure>
+        <div class="story__stamp" aria-hidden="true">
+          <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#circ">• cuit au feu de bois • fait maison </textPath></text></svg>
+          <span><svg><use href="#logo-mark"/></svg></span>
+        </div>
+      </div>
+      <div class="story__text">
+        <p class="eyebrow reveal">La maison</p>
+        <h2 class="reveal">Une cuisine italienne <em>généreuse</em>, faite ici, chaque jour.</h2>
+        <p class="reveal">Au Grillon, la pâte lève tranquillement, le four à bois chauffe dès le service du midi et les sauces mijotent en cuisine. Lasagnes, pâtes, pizzas, mais aussi quelques classiques français et les incontournables ravioles du Royans : on cuisine ce qu'on aime manger.</p>
+        <p class="reveal">Pour finir en douceur, un tiramisu maison ou une glace, et un bon verre de vin pour accompagner le tout.</p>
+        <ul class="badges reveal">
+          <li><svg class="i" aria-hidden="true"><use href="#i-flame"/></svg>Four à bois</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-pasta"/></svg>Pâtes &amp; ravioles</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-wine"/></svg>Vins &amp; boissons</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-ice"/></svg>Tiramisu &amp; glaces</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= SIGNATURES ================= -->
+    <section class="signatures section" aria-labelledby="sig-title">
+      <div class="section__head">
+        <p class="eyebrow reveal">Les incontournables</p>
+        <h2 id="sig-title" class="reveal">Ce qu'on vous conseille <em>les yeux fermés</em></h2>
+      </div>
+      <div class="sig-grid">
+        <article class="sig reveal" data-tilt>
+          <div class="sig__img"><img src="images/pizza-tranches-800.webp" srcset="images/pizza-tranches-480.webp 480w, images/pizza-tranches-800.webp 800w, images/pizza-tranches-1200.webp 1200w" sizes="(max-width: 600px) 92vw, (max-width: 1100px) 46vw, 23vw" alt="Pizza garnie coupée en parts" loading="lazy" decoding="async"></div>
+          <div class="sig__body"><span class="sig__tag">Pizza maison</span><h3>La Grillon</h3><p>Crème, champignons de Paris, épaule, Roquefort, fromage, origan, olives.</p><span class="sig__price">13,00 €</span></div>
+        </article>
+        <article class="sig reveal" data-tilt>
+          <div class="sig__img"><img src="images/burger-800.webp" srcset="images/burger-480.webp 480w, images/burger-800.webp 800w, images/burger-1200.webp 1200w" sizes="(max-width: 600px) 92vw, (max-width: 1100px) 46vw, 23vw" alt="Burger garni et pain brioché" loading="lazy" decoding="async"></div>
+          <div class="sig__body"><span class="sig__tag">Burger</span><h3>Burger Grillon</h3><p>Galettes de pommes de terre, viande hachée façon bouchère, œuf au plat, sauce américaine.</p><span class="sig__price">15,90 €</span></div>
+        </article>
+        <article class="sig reveal" data-tilt>
+          <div class="sig__img"><img src="images/salade-800.webp" srcset="images/salade-480.webp 480w, images/salade-800.webp 800w, images/salade-1200.webp 1200w" sizes="(max-width: 600px) 92vw, (max-width: 1100px) 46vw, 23vw" alt="Salade composée colorée" loading="lazy" decoding="async"></div>
+          <div class="sig__body"><span class="sig__tag">Salade gourmande</span><h3>Salade du Royans</h3><p>Ravioles frites, pommes de terre sautées, St Marcellin, œuf poché, tomates.</p><span class="sig__price">12,90 €</span></div>
+        </article>
+        <article class="sig reveal" data-tilt>
+          <div class="sig__img"><img src="images/tiramisu-800.webp" srcset="images/tiramisu-480.webp 480w, images/tiramisu-800.webp 800w, images/tiramisu-1200.webp 1200w" sizes="(max-width: 600px) 92vw, (max-width: 1100px) 46vw, 23vw" alt="Part de tiramisu" loading="lazy" decoding="async"></div>
+          <div class="sig__body"><span class="sig__tag">Dessert</span><h3>Tiramisu maison</h3><p>Le dessert qu'on nous réclame : crémeux, cacaoté, juste ce qu'il faut de café.</p><span class="sig__price">Sur place</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= LA CARTE (fond papier) ================= -->
+    <section class="menu section" id="carte" aria-labelledby="carte-title">
+      <div class="section__head">
+        <p class="eyebrow reveal">La carte</p>
+        <h2 id="carte-title" class="reveal">Choisissez, on s'occupe <em>du reste</em></h2>
+        <p class="section__sub reveal"><strong class="woodfire"><svg class="i" aria-hidden="true"><use href="#i-flame"/></svg>Toutes nos pizzas sont cuites au feu de bois</strong>, les végétariennes aussi. Tous les plats sont servis sur place ou à emporter.</p>
+      </div>
+
+      <div class="menu__tools reveal">
+        <div class="tabs" role="tablist" aria-label="Catégories de la carte"></div>
+        <div class="menu__filters">
+          <label class="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            <input type="search" placeholder="Un ingrédient ? chèvre, morilles…" aria-label="Rechercher un plat ou un ingrédient">
+          </label>
+          <label class="toggle"><input type="checkbox" data-veg><span></span>Végétarien</label>
+        </div>
+      </div>
+
+      <div class="menu__panel" id="menu-panel" role="tabpanel" aria-live="polite">
+        <div class="menu__list"></div>
+        <p class="menu__empty" hidden>Aucun plat ne correspond. Essayez un autre ingrédient.</p>
+      </div>
+      <p class="menu__note">Suppléments : bol de salade verte +2 € · ingrédient +1,50 € · saumon ou aubergine +2 €. Burgers et carpaccio servis avec frites et salade verte. Liste des allergènes disponible sur demande.
+        <a href="https://cdn.website.dish.co/media/d7/96/2256050/LE-GRILLON-LE-GRILLON.pdf" target="_blank" rel="noopener">Voir la carte PDF ↗</a></p>
+    </section>
+
+    <!-- ================= AMBIANCE ================= -->
+    <section class="ambiance section" id="ambiance" aria-labelledby="amb-title">
+      <div class="section__head">
+        <p class="eyebrow reveal">L'ambiance</p>
+        <h2 id="amb-title" class="reveal">Un repas, une soirée, <em>une fête</em></h2>
+      </div>
+      <div class="amb-grid">
+        <article class="amb amb--big reveal">
+          <img src="images/terrasse-800.webp" srcset="images/terrasse-480.webp 480w, images/terrasse-800.webp 800w, images/terrasse-1200.webp 1200w" sizes="(max-width: 1080px) 100vw, 55vw" alt="Terrasse de restaurant au soleil" loading="lazy" decoding="async">
+          <div class="amb__txt"><h3>La terrasse</h3><p>Aux beaux jours, on mange dehors. Déjeuner au soleil ou dîner à la fraîche, la terrasse est animée tout l'été.</p></div>
+        </article>
+        <article class="amb reveal">
+          <img src="images/ambiance-800.webp" srcset="images/ambiance-480.webp 480w, images/ambiance-800.webp 800w, images/ambiance-1200.webp 1200w" sizes="(max-width: 1080px) 100vw, 40vw" alt="Amis attablés qui rient au restaurant" loading="lazy" decoding="async">
+          <div class="amb__txt"><h3>Soirées karaoké</h3><p>Régulièrement, le micro passe de table en table. Ambiance garantie.</p></div>
+        </article>
+        <article class="amb reveal">
+          <img src="images/salle-800.webp" srcset="images/salle-480.webp 480w, images/salle-800.webp 800w, images/salle-1200.webp 1200w" sizes="(max-width: 1080px) 100vw, 40vw" alt="Salle de restaurant chaleureuse" loading="lazy" decoding="async">
+          <div class="amb__txt"><h3>Vos événements</h3><p>Anniversaire, repas d'équipe, fête de famille : on organise votre soirée privée.</p><a href="#contact" class="link">Nous en parler <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= EMPORTER (CTA) ================= -->
+    <section class="takeaway" aria-label="Vente à emporter">
+      <img src="images/pizza-partage-800.webp" srcset="images/pizza-partage-480.webp 480w, images/pizza-partage-800.webp 800w, images/pizza-partage-1200.webp 1200w" sizes="100vw" alt="" loading="lazy" decoding="async" data-parallax="0.12">
+      <div class="takeaway__inner reveal">
+        <p class="script">Envie d'une pizza à la maison ?</p>
+        <h2>Commandez par téléphone,<br>c'est prêt quand vous arrivez.</h2>
+        <a class="btn btn--red btn--big btn--magnet" href="tel:+33476313851"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Appeler le 04 76 31 38 51</a>
+      </div>
+    </section>
+
+    <!-- ================= INFOS ================= -->
+    <section class="infos section" id="infos" aria-labelledby="infos-title">
+      <div class="section__head">
+        <p class="eyebrow reveal">Infos pratiques</p>
+        <h2 id="infos-title" class="reveal">Quand venir, <em>comment payer</em></h2>
+      </div>
+      <div class="infos__grid">
+        <div class="card hours reveal">
+          <div class="card__top"><h3>Horaires</h3><span class="status status--big" data-status><i></i><span>…</span></span></div>
+          <table><caption class="sr">Horaires d'ouverture</caption><tbody class="hours__rows"></tbody></table>
+          <p class="muted">Fermé le lundi, jour de repos de l'équipe.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Services</h3>
+          <ul class="services">
+            <li><svg class="i" aria-hidden="true"><use href="#i-access"/></svg>Accès PMR</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-sun"/></svg>Terrasse</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-parking"/></svg>Parking gratuit</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-party"/></svg>Événements privés</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-bag"/></svg>À emporter</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-wifi"/></svg>Wi-Fi gratuit</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-paw"/></svg>Animaux bienvenus</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-mic"/></svg>Soirées karaoké</li>
+          </ul>
+          <h3 class="mt">Paiement</h3>
+          <ul class="chips">
+            <li>Espèces</li><li>CB sans contact</li><li>VISA</li><li>MasterCard</li><li>Maestro</li><li>Apple Pay</li><li>Ticket Restaurant®</li><li>Carte ticket resto</li><li>Chèques vacances</li><li>Virement</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT / ACCÈS ================= -->
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="contact__info">
+        <p class="eyebrow reveal">Nous trouver</p>
+        <h2 id="contact-title" class="reveal">À deux pas de <em>l'aéroport</em></h2>
+        <address class="reveal">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Le+Grillon+Route+de+l%27A%C3%A9roport+38590+Saint-%C3%89tienne-de-Saint-Geoirs" target="_blank" rel="noopener" class="contact__line">
+            <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span><span>Route de l'Aéroport<br>38590 Saint-Étienne-de-Saint-Geoirs</span></a>
+          <a href="tel:+33476313851" class="contact__line"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span><span>04 76 31 38 51</span></a>
+          <a href="mailto:legrillon38@orange.fr" class="contact__line"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg></span><span>legrillon38@orange.fr</span></a>
+        </address>
+        <div class="map reveal">
+          <button class="map__load" type="button">
+            <svg class="i map__pin" aria-hidden="true"><use href="#i-pin"/></svg>
+            <strong>Afficher la carte</strong>
+            <small>Votre adresse IP sera envoyée à Google Maps.</small>
+          </button>
+        </div>
+      </div>
+
+      <form class="form card reveal" novalidate>
+        <h3>Une réservation, un événement&nbsp;?</h3>
+        <p class="muted">Écrivez-nous, on vous répond rapidement. Pour ce soir, le plus simple reste d'appeler.</p>
+        <div class="form__row">
+          <label class="field"><input name="nom" required placeholder=" " autocomplete="name"><span>Votre nom</span></label>
+          <label class="field"><input name="tel" type="tel" placeholder=" " autocomplete="tel"><span>Téléphone</span></label>
+        </div>
+        <label class="field"><input name="email" type="email" required placeholder=" " autocomplete="email"><span>E-mail</span></label>
+        <div class="form__row">
+          <label class="field"><select name="objet"><option>Réservation</option><option>Événement privé</option><option>Commande à emporter</option><option>Autre demande</option></select><span class="is-up">Objet</span></label>
+          <label class="field"><input name="couverts" type="number" min="1" max="80" placeholder=" "><span>Personnes</span></label>
+        </div>
+        <label class="field"><textarea name="message" rows="4" required placeholder=" "></textarea><span>Votre message</span></label>
+        <button class="btn btn--red btn--full" type="submit">Envoyer le message</button>
+        <p class="form__msg" role="status"></p>
+        <p class="form__legal">Vos coordonnées servent uniquement à répondre à votre demande. <button type="button" class="linkbtn" data-open="legal">Confidentialité</button></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- ================= PIED DE PAGE ================= -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <a href="#top" class="footer__logo" aria-label="Le Grillon, retour en haut"><svg aria-hidden="true"><use href="#logo"/></svg></a>
+      <p>Restaurant · Pizzeria au feu de bois<br>Route de l'Aéroport, 38590 Saint-Étienne-de-Saint-Geoirs<br><a href="tel:+33476313851">04 76 31 38 51</a></p>
+    </div>
+    <div class="footer__links">
+      <a href="https://www.facebook.com/pages/category/Pizza-Place/Le-Grillon-Sesg-1697129743664440/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Le+Grillon+Saint-%C3%89tienne-de-Saint-Geoirs" target="_blank" rel="noopener">Avis Google</a>
+      <button type="button" class="linkbtn" data-open="legal">Mentions légales &amp; confidentialité</button>
+    </div>
+    <p class="footer__copy">© <span data-year></span> Le Grillon · SARL 3C</p>
+  </footer>
+
+  <dialog class="legal" id="legal" aria-labelledby="legal-title">
+    <h3 id="legal-title">Mentions légales</h3>
+    <dl>
+      <dt>Raison sociale</dt><dd>3C</dd>
+      <dt>Responsable</dt><dd>Mickaël Coimbra</dd>
+      <dt>Capital social</dt><dd>7 500 €</dd>
+      <dt>Immatriculation</dt><dd>Grenoble · 96 497547075</dd>
+      <dt>Adresse</dt><dd>Route de l'Aéroport, 38590 Saint-Étienne-de-Saint-Geoirs</dd>
+      <dt>Contact</dt><dd>04 76 31 38 51 · legrillon38@orange.fr</dd>
+      <dt>Hébergeur</dt><dd>À compléter lors de la mise en ligne (nom, adresse, téléphone)</dd>
+    </dl>
+    <h4>Confidentialité</h4>
+    <p>Ce site ne dépose aucun cookie et n'utilise aucun outil de suivi. Le formulaire ne stocke rien : il prépare un e-mail dans votre messagerie, envoyé seulement si vous le validez. La carte Google Maps n'est chargée que si vous cliquez dessus ; Google reçoit alors votre adresse IP. Pour toute question sur vos données : legrillon38@orange.fr.</p>
+    <h4>Crédits</h4>
+    <p class="muted">Photos d'illustration : Unsplash. Polices : Fraunces, Manrope, Pinyon Script (licence OFL), hébergées sur ce site.</p>
+    <form method="dialog"><button class="btn btn--small btn--red">Fermer</button></form>
+  </dialog>
+
+  <!-- Aperçu photo qui suit la souris sur la carte -->
+  <div class="peek" aria-hidden="true"><img alt=""></div>
+
+  <!-- Barre d'action mobile -->
+  <nav class="mobilebar" aria-label="Actions rapides">
+    <a href="tel:+33476313851"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+    <a href="#carte"><svg class="i" aria-hidden="true"><use href="#i-pizza"/></svg>La carte</a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Route+de+l%27A%C3%A9roport+38590+Saint-%C3%89tienne-de-Saint-Geoirs" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-nav"/></svg>Itinéraire</a>
+  </nav>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

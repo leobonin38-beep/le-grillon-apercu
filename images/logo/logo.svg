@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560">
+  <title>Le Grillon</title>
+  <!-- Version vectorielle du logo. Polices : Manrope (GRILLON) et Pinyon Script (Le) -->
+  <path d="M484.9 286.2A205 205 0 1 1 465.8 192.4" fill="none" stroke="#e8222b" stroke-width="80"/>
+  <rect x="185" y="266" width="335" height="64" fill="#e8222b"/>
+  <g fill="#fff"><rect x="183" y="274" width="60" height="5" rx="2.5"/><rect x="183" y="287" width="60" height="5" rx="2.5"/><rect x="183" y="300" width="60" height="5" rx="2.5"/><rect x="183" y="313" width="60" height="5" rx="2.5"/></g>
+  <text x="252" y="318" fill="#fff" font-family="Manrope, Century Gothic, sans-serif" font-weight="500" font-size="54" textLength="256" lengthAdjust="spacingAndGlyphs">GRILLON</text>
+  <text x="34" y="432" fill="#3a2a28" font-family="Pinyon Script, cursive" font-size="200">Le</text>
+</svg>
