@@ -439,5 +439,100 @@ html:not(.no-intro) .hero { --intro: 1.9s; }
 .hours td:first-child { white-space: nowrap; }
 
 /* mention « feu de bois » au-dessus de la carte */
-.woodfire { display: inline-flex; align-items: center; gap: 6px; color: var(--red); font-weight: 700; }
-.woodfire .i { color: var(--ember); }
+.woodfire { color: var(--red); font-weight: 700; }
+.woodfire .i { color: var(--ember); width: 1.05em; height: 1.05em; vertical-align: -.15em; margin-right: 6px; }
+
+/* =========================================================
+   Mobile (v3) : le site est surtout consulté sur téléphone
+   ========================================================= */
+/* plus aucun défilement horizontal parasite (bandeau incliné, héro) */
+html, body { overflow-x: hidden; }
+@supports (overflow: clip) { html, body { overflow-x: clip; } }
+a, button, label { -webkit-tap-highlight-color: transparent; }
+
+/* plats : le nom peut passer sur 2 lignes sans pousser le prix hors de l'écran */
+.dish__top { min-width: 0; }
+.dish__name { min-width: 0; overflow-wrap: anywhere; }
+.dish__price--multi { display: flex; flex-direction: column; align-items: flex-end; line-height: 1.25; gap: 2px; }
+.menu__list > .dish { min-width: 0; }
+
+/* onglets : fondu sur le bord quand il reste des onglets à faire défiler */
+.tabs.has-more-r { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 44px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 44px), transparent); }
+.tabs.has-more-l { -webkit-mask-image: linear-gradient(90deg, transparent, #000 44px); mask-image: linear-gradient(90deg, transparent, #000 44px); }
+.tabs.has-more-l.has-more-r { -webkit-mask-image: linear-gradient(90deg, transparent, #000 44px, #000 calc(100% - 44px), transparent); mask-image: linear-gradient(90deg, transparent, #000 44px, #000 calc(100% - 44px), transparent); }
+
+@media (max-width: 1080px) {
+  /* zones à toucher d'au moins 44 px */
+  .toggle { min-height: 44px; }
+  .menu__note a, .link, .footer__links a, .footer__links .linkbtn, .footer__brand p a { display: inline-flex; align-items: center; min-height: 44px; }
+  .footer__links { gap: 4px 22px; }
+  /* le pied de page n'est pas caché par la barre d'appel */
+  .footer { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
+  .hours tr.is-today td:first-child::after { display: block; margin: 2px 0 0; }
+}
+
+@media (max-width: 600px) {
+  .section { padding-block: 72px; }
+  .section__head { margin-bottom: 32px; }
+
+  /* champs à 16 px : sinon l'iPhone zoome au toucher */
+  .search input, .form input, .form select, .form textarea { font-size: 16px; }
+  .search { padding: 0 14px; }
+  .search input { padding: 13px 0; }
+
+  /* --- La carte --- */
+  .menu__tools { display: contents; }
+  .tabs { position: sticky; top: var(--hdr, 0px); z-index: 5; margin: 0 calc(var(--pad) * -1) 14px; border-radius: 0; border-inline: 0;
+    padding: 8px var(--pad); background: rgba(255, 250, 241, .96); backdrop-filter: blur(8px);
+    transition: top .45s var(--ease), box-shadow .3s; scroll-padding-inline: var(--pad); }
+  .tabs.is-stuck { box-shadow: 0 10px 24px -14px rgba(42, 26, 23, .45); }
+  .tabs__pill { top: 8px; bottom: 8px; }
+  .tab { padding: 10px 15px; font-size: .9rem; }
+  .menu__filters { justify-content: space-between; gap: 10px 14px; margin-bottom: 18px; }
+  .menu__filters .search { flex: 1 1 100%; }
+  .dish { padding: 16px 4px; }
+  .dish__top { gap: 10px; }
+  .dish__name { font-size: 1.16rem; }
+  .dish__price { font-size: 1.08rem; }
+  .dish__desc { font-size: .9rem; line-height: 1.5; }
+  .tag { margin-left: 6px; padding: 2px 7px; }
+  .menu__note { margin-top: 24px; }
+
+  /* --- Incontournables : on les fait défiler au doigt --- */
+  .sig-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px;
+    margin-inline: calc(var(--pad) * -1); padding: 4px var(--pad) 18px; scroll-padding-inline: var(--pad); scrollbar-width: none; }
+  .sig-grid::-webkit-scrollbar { display: none; }
+  .sig { flex: 0 0 82%; scroll-snap-align: start; transform: none !important; }
+  .sig__img { aspect-ratio: 4/3; }
+  .sig__body { padding: 18px 18px 20px; }
+  .sig h3 { font-size: 1.35rem; }
+  .sig-dots { display: flex; justify-content: center; gap: 8px; margin-top: 4px; }
+  .sig-dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--line); transition: background .3s, width .3s var(--ease); }
+  .sig-dots i.is-on { width: 22px; border-radius: 99px; background: var(--ember); }
+
+  /* --- Ambiance, à emporter --- */
+  .amb { min-height: 260px; } .amb--big { min-height: 320px; }
+  .takeaway { min-height: 0; padding-block: 90px; }
+
+  /* --- Infos & contact --- */
+  .hours td { padding: 12px 6px; }
+  .services li { padding: 11px 12px; }
+  .contact__line { padding: 12px 14px; gap: 12px; overflow-wrap: anywhere; }
+  .map { aspect-ratio: 4/3; }
+  .footer__logo svg { width: 110px; height: 110px; }
+}
+@media (min-width: 601px) { .sig-dots { display: none; } }
+
+/* très petits écrans (iPhone SE 1re gén., 320 px) */
+@media (max-width: 360px) {
+  .dish__name { font-size: 1.08rem; }
+  .tag { display: table; margin: 4px 0 0; transform: none; }
+  .header .logo__text { font-size: .95em; }
+}
+@media (max-width: 600px) {
+  .infos__grid > *, .contact > * { min-width: 0; }
+  .card { padding: 22px 18px; }
+  .infos .services { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .infos .services li { font-size: .84rem; gap: 9px; padding: 11px 10px; line-height: 1.3; }
+  .infos .services .i { width: 19px; height: 19px; flex: none; }
+}

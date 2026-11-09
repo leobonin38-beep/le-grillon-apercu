@@ -74,6 +74,7 @@
   /* ------------------------------------------------------------
      Carte interactive : onglets + recherche + filtre végé
      ------------------------------------------------------------ */
+  const phone = matchMedia("(max-width: 600px)");
   const tabsEl = $(".tabs"), listEl = $(".menu__list"), emptyEl = $(".menu__empty");
   const search = $(".search input"), veg = $("[data-veg]");
   let current = "pizzas";
@@ -97,6 +98,13 @@
     if (focus) b.focus();
     // défile seulement la rangée d'onglets, pas la page
     tabsEl.scrollTo({ left: b.offsetLeft - (tabsEl.clientWidth - b.offsetWidth) / 2, behavior: reduced ? "auto" : "smooth" });
+    // téléphone : si on était descendu dans la liste, on remonte en haut de la nouvelle catégorie
+    if (phone.matches) {
+      // en remontant, l'en-tête réapparaît : on garde sa place + celle des onglets
+      const f = $(".menu__filters").getBoundingClientRect();
+      const room = tabsEl.offsetHeight + $(".header").offsetHeight + 8;
+      if (f.top < room) scrollTo({ top: scrollY + f.top - room, behavior: reduced ? "auto" : "smooth" });
+    }
   }
   // clavier : flèches, Début, Fin (motif ARIA « tabs »)
   tabsEl.addEventListener("keydown", (e) => {
@@ -138,11 +146,12 @@
     $("#menu-panel").setAttribute("aria-labelledby", q ? "carte-title" : "tab-" + current);
     listEl.innerHTML = items.map(([name, price, desc, flag, cat, catId], i) => {
       const p = Array.isArray(price)
-        ? `<small>sauce</small>${euro(price[0])} · <small>gratinées</small>${euro(price[1])}`
+        ? `<span><small>sauce</small>${euro(price[0])}</span><span><small>gratinées</small>${euro(price[1])}</span>`
         : euro(price);
+      const multi = Array.isArray(price) ? " dish__price--multi" : "";
       const tag = flag === "veg" ? '<span class="tag tag--veg">végé</span>' : flag === "star" ? '<span class="tag tag--star">signature</span>' : "";
       return `<article class="dish" style="--i:${i}" data-cat="${catId}" data-n="${i}">
-        <div class="dish__top"><h3 class="dish__name">${highlight(name, q)}${tag}</h3><span class="dish__dots"></span><span class="dish__price">${p}</span></div>
+        <div class="dish__top"><h3 class="dish__name">${highlight(name, q)}${tag}</h3><span class="dish__dots"></span><span class="dish__price${multi}">${p}</span></div>
         <p class="dish__desc">${highlight(desc, q)}${q && cat ? ` · <em>${esc(cat)}</em>` : ""}</p>
       </article>`;
     }).join("");
@@ -314,6 +323,9 @@
     header.classList.toggle("is-scrolled", y > 40);
     header.classList.toggle("is-hidden", y > lastY && y > 500 && !$(".nav").classList.contains("is-open"));
     mobilebar.classList.toggle("is-visible", y > innerHeight * 0.6);
+    // onglets de la carte collés sous l'en-tête (téléphone)
+    document.documentElement.style.setProperty("--hdr", header.classList.contains("is-hidden") ? "0px" : header.offsetHeight + "px");
+    tabsEl.classList.toggle("is-stuck", phone.matches && tabsEl.getBoundingClientRect().top <= header.offsetHeight + 1 && $("#carte").getBoundingClientRect().top < 0);
     bar.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
     if (!reduced) {
       if (y < innerHeight) heroImg.style.translate = `0 ${y * 0.25}px`;
@@ -421,6 +433,34 @@
     location.href = `mailto:legrillon38@orange.fr?subject=${encodeURIComponent(d.objet + " — " + d.nom)}&body=${encodeURIComponent(body)}`;
     msg.style.color = ""; msg.textContent = "Votre messagerie s'ouvre avec le message prêt à partir. Merci !";
   });
+
+  /* Onglets : fondu sur le bord tant qu'il reste des onglets cachés */
+  function tabsEdges() {
+    const max = tabsEl.scrollWidth - tabsEl.clientWidth;
+    tabsEl.classList.toggle("has-more-l", tabsEl.scrollLeft > 4);
+    tabsEl.classList.toggle("has-more-r", tabsEl.scrollLeft < max - 4);
+  }
+  tabsEl.addEventListener("scroll", tabsEdges, { passive: true });
+  addEventListener("resize", tabsEdges);
+  document.fonts?.ready.then(tabsEdges);
+  tabsEdges();
+
+  /* Incontournables : points de pagination du carrousel (téléphone) */
+  const sigGrid = $(".sig-grid");
+  if (sigGrid) {
+    const cards = $$(".sig", sigGrid);
+    const dots = document.createElement("div");
+    dots.className = "sig-dots"; dots.setAttribute("aria-hidden", "true");
+    dots.innerHTML = cards.map(() => "<i></i>").join("");
+    sigGrid.after(dots);
+    const syncDots = () => {
+      const w = cards[0].offsetWidth + (parseFloat(getComputedStyle(sigGrid).columnGap) || 0);
+      const n = Math.min(cards.length - 1, Math.round(sigGrid.scrollLeft / w));
+      $$("i", dots).forEach((d, i) => d.classList.toggle("is-on", i === n));
+    };
+    sigGrid.addEventListener("scroll", syncDots, { passive: true });
+    syncDots();
+  }
 
   /* Mentions légales + année */
   $$("[data-open='legal']").forEach((b) => b.addEventListener("click", () => $("#legal").showModal()));
